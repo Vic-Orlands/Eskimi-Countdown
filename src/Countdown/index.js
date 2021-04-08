@@ -105,27 +105,27 @@ class Countdown extends Component {
 				<h1 ref={(h1) => (this.head = h1)}>A slick Ramadan countdown</h1>
 
 				<section className="flex-parent">
-					<section className="ad" className={'ad ' + (this.state.daylight ? 'container-night' : ' ')}>
+					<section className="ad" className={'ad ' + (this.state.daylight ? '' : "container-night")}>
 						<img src={require('./assets/header.png')} alt="header" ref={(img) => (this.subhead = img)} />
 
 						<section className="timer-parent">
 							<h1
 								ref={(div) => (this.timer = div)}
-								className={'h1 ' + (this.state.daylight ? 'nighttime' : ' ')}
+								className={'h1 ' + (this.state.daylight ? '' : 'nighttime')}
 							>
 								{this.state.hours}
 							</h1>
 
 							<h1
 								ref={(div) => (this.timer2 = div)}
-								className={'h1 ' + (this.state.daylight ? 'nighttime' : ' ')}
+								className={'h1 ' + (this.state.daylight ? '' : 'nighttime')}
 							>
 								{this.state.minutes}
 							</h1>
 
 							<h1
 								ref={(div) => (this.timer3 = div)}
-								className={'h1 ' + (this.state.daylight ? 'nighttime' : ' ')}
+								className={'h1 ' + (this.state.daylight ? '' : 'nighttime')}
 							>
 								{this.state.seconds}
 							</h1>
