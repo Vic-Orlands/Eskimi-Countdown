@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Mukta', sans-serif;
+}
+
+body {
+	font-size: 100%;
+}
+
+.time-body {
+	background-color: #22262e;
+	color: #798eb0;
+	height: 100vh;
+	text-align: center;
+	width: 100%;
+	padding-top: 4rem;
+}
+
+.flex-parent {
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem;
+}
+
+.ad {
+	width: 300px;
+	height: 250px;
+	background-image: url("./assets/banner.png");
+	background-position: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.container-night {
+	background-image: none;
+	background-color: #191a1d;
+}
+
+.ad .timer-parent {
+	width: 100%;
+	top: 3.5rem;
+	position: absolute;
+	z-index: 999999;
+	display: flex;
+	justify-content: center;
+}
+
+.h1 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	background-color: orange;
+	color: #ffffff;
+	padding: .4rem .9rem;
+	height: 6vh;
+}
+
+.nighttime {
+	background-color: #2e2f31;
+	color: orange;
+}
+
+.ad .timer-parent h1:nth-child(2) {
+	margin: 0 .9rem;
+}
+
+#arabic {
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	animation-name: scale;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes scale {
+	0% {
+		transform: scale(0.75);
+	}
+	50% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(0.75);
+	}
+}
+
+#box {
+	position: absolute;
+	bottom: 0;
+	left: 7rem;
+	transform-origin: bottom;
+}
+
+.anime {
+	position: absolute;
+	bottom: .7rem;
+	left: .5rem;
+}
+
+.anime:hover,
+#box:hover {
+	animation-name: bounce;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+}
+
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-15px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
